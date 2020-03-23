@@ -1,0 +1,26 @@
+apiVersion: v2
+publisher: RADON
+name: defect-prediction
+version: 1
+type: VS Code extension # plugin type; e.g. "Theia plugin", "Che Editor", "VS Code extension"
+displayName: Defect Prediction Ansible
+title: Defect Prediction Ansible
+description: Defect Prediction tool for ansible yaml files
+icon: https://www.eclipse.org/che/images/logo-eclipseche.svg
+repository: https://github.com/titandrubbel/defect-prediction
+category: Other
+spec:
+  endpoints:
+  - name: "api"
+    public: true
+    targetPort: 5000
+    attributes:
+      protocol: http
+      type: ide
+  containers:
+  - image: "docker.io/rdrubbel/radon:dp"
+    name: defect-predictor
+    memoryLimit: 1500Mi
+    ports:
+      - exposedPort: 5000
+    mountSources: true
