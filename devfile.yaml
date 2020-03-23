@@ -1,8 +1,7 @@
 metadata:
   name: defect_predictor
 projects:
--
-  name: Upload-folder
+- name: Upload-folder
   source:
     type: git
     location: "https://github.com/rdrubbel/TEST2.git"
