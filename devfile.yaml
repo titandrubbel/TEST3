@@ -1,0 +1,26 @@
+metadata:
+  name: defect_predictor
+projects:
+-
+  name: Upload-folder
+  source:
+    type: git
+    location: "https://github.com/rdrubbel/TEST2.git"
+components:
+  - mountSources: true
+    endpoints:
+      - name: upload-file
+        port: 8080
+    memoryLimit: 512Mi
+    type: dockerimage
+    alias: file-upload
+    image: 'docker.io/rdrubbel/upload:latest'
+  - mountSources: true
+    endpoints:
+      - name: api-endpoint
+        port: 5000
+    memoryLimit: 512Mi
+    type: dockerimage
+    alias: api
+    image: 'docker.io/rdrubbel/radon:dp'
+apiVersion: 1.0.0
