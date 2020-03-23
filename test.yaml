@@ -2,7 +2,7 @@ apiVersion: v2
 publisher: RADON
 name: defect-prediction
 version: 1
-type: VS Code extension # plugin type; e.g. "Theia plugin", "Che Editor", "VS Code extension"
+type: Che editor # plugin type; e.g. "Theia plugin", "Che Editor", "VS Code extension"
 displayName: Defect Prediction Ansible
 title: Defect Prediction Ansible
 description: Defect Prediction tool for ansible yaml files
