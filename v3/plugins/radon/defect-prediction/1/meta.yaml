@@ -24,3 +24,5 @@ spec:
     ports:
       - exposedPort: 5000
     mountSources: true
+ extensions:
+"https://download.jboss.org/jbosstools/vscode/3rdparty/vscode-python/python-2019.5.18875.vsix"
