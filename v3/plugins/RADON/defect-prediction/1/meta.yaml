@@ -1,5 +1,5 @@
 apiVersion: v2
-publisher: RADON
+publisher: radon
 name: defect-prediction
 version: 1
 type: VS Code extension # plugin type; e.g. "Theia plugin", "Che Editor", "VS Code extension"
