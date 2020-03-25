@@ -2,13 +2,13 @@ apiVersion: v2
 publisher: RADON
 name: defect-prediction
 version: 1
-type: Che editor # plugin type; e.g. "Theia plugin", "Che Editor", "VS Code extension"
+type: VS Code extension # plugin type; e.g. "Theia plugin", "Che Editor", "VS Code extension"
 displayName: Defect Prediction Ansible
 title: Defect Prediction Ansible
 description: Defect Prediction tool for ansible yaml files
 icon: https://www.eclipse.org/che/images/logo-eclipseche.svg
 repository: https://github.com/titandrubbel/defect-prediction
-category: Other
+category: Other #Editor, Debugger, Formatter, Language, Linter, Snippet, Theme, or Other.
 spec:
   endpoints:
   - name: "api"
@@ -20,7 +20,7 @@ spec:
   containers:
   - image: "docker.io/rdrubbel/radon:dp"
     name: defect-predictor
-    memoryLimit: 1500Mi
+    memoryLimit: 512Mi
     ports:
       - exposedPort: 5000
     mountSources: true
